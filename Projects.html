@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeewaka Maduwantha - Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Jeewaka <span>Maduwantha</span></a>
+        <i class='bx bx-menu-wider' id="menu-icon"></i> 
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="resume.html" class="active">Resume</a>
+        </nav>
+    </header>
+
+    <section class="projects" id="projects">
+        <h2 class="heading">My <span>Projects</span></h2>
+        
+        <div class="project-tabs">
+            <button class="tab-btn active" onclick="openTab('web-development')">Web Development</button>
+            <button class="tab-btn" onclick="openTab('video-editing')">Video Editing</button>
+        </div>
+        
+        <div id="web-development" class="tab-content" style="display: block;">
+            <div class="project-category">
+                <h3>Frontend Development</h3>
+                <p>Creating a Web Interface using HTML, CSS, and JavaScript</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+            
+            <div class="project-category">
+                <h3>UX / UI Design</h3>
+                <p><b>UI (User Interface) Design</b><br>
+                    - Design the look & feel of an App or Website<br>
+                    - Set colors, buttons, icons, typography, spacing<br>
+                    - Design responsive layouts (mobile/tablet/desktop)<br>
+                    - Design tools: Figma, Adobe XD, Sketch<br>
+                    <br>
+                    <b>UX (User Experience) Design</b><br>
+                    - User research & user needs analysis<br>
+                    - Wireframes and prototypes creation<br>
+                    - User journey mapping<br>
+                    - Usability testing<br>
+                    - Improve navigation, simplicity & accessibility<br>
+                </p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+        </div>
+        
+        <div id="video-editing" class="tab-content" style="display: none;">
+            <div class="project-category">
+                <h3>Commercial Videos</h3>
+                <p>Make a professional Video for Personal and Business Works. 
+                <br>24/7 Support<br>
+                </p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+            
+            <div class="project-category">
+                <h3>Short Films</h3>
+                <p>Create a Short films Your Own Type.
+                <br>24/7 Support<br>
+                </p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function openTab(tabName) {
+            var i, tabContent, tabButtons;
+            
+            tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+            }
+            
+            tabButtons = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].className = tabButtons[i].className.replace(" active", "");
+            }
+            
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.className += " active";
+        }
+    </script>
+      
+</body>
+</html>

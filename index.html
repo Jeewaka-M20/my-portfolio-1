@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeewaka Maduwantha</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+    <a href="Projects.html">Projects</a>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="#home" class="logo">Jeewaka <span>Maduwantha</span></a>
+        <i class='bx bx-menu-wider' id="menu-icon"></i> 
+        <nav class="navbar">
+            <a href="index.html" class="active">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.html" class="active">Resume</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-img">
+            <img src="DSC_0134 copy.jpg" alt="Profile Image" class="profile-pic">
+        </div>
+
+        <div class="home-content">
+            <h1><span>Jeewaka Maduwantha</span></h1>
+            <h3 class="text-animation">I'm a <span id="typing"></span></h3>
+            <p>Creative Web Developer passionate about building modern UI/UX experiences that delight users.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=100089488135015" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://github.com/Jeewaka-M20" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://t.me/+94751424659" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="https://www.instagram.com/jeewaka_maduwantha/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <a href="https://wa.me/94751424659" class="btn" target="_blank">Hire Me</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+    <div class="about-content">
+        <h2 class="heading">About <span>Me</span></h2>
+        <p class="about-text">Creative Web Developer passionate about building modern UI/UX experiences that delight users. I specialize in creating responsive websites with clean, efficient code and engaging user interfaces.</p>
+        
+        <div class="more-content" style="display: none;">
+            <p>With over 3 years of professional experience in web development, I have worked on numerous projects ranging from small business websites to complex web applications. My expertise includes:</p>
+            <ul>
+                <li>Frontend Development (HTML, CSS, JavaScript, React)</li>
+                <li>UI/UX Design Principles</li>
+                <li>Responsive Web Design</li>
+                <li>Cross-browser Compatibility</li>
+            </ul>
+            <p>I'm committed to delivering high-quality work that meets both client requirements and industry standards.</p>
+        </div>
+        
+        <button class="btn read-more-btn">Read More</button>
+    </div>
+    </section>
+
+    <script>
+        var typed = new Typed("#typing", {
+            strings: ["Web Developer", "Video Editor"],
+            typeSpeed: 100,
+            backSpeed: 50,
+            loop: true
+        });
+    </script>
+
+    <script>
+    document.querySelector('.read-more-btn').addEventListener('click', function() {
+        const moreContent = document.querySelector('.more-content');
+        const btn = this;
+        
+        if(moreContent.style.display === 'none' || moreContent.style.display === '') {
+            moreContent.style.display = 'block';
+            btn.textContent = 'Read Less';
+            moreContent.style.animation = 'fadeIn 0.5s ease-out';
+        } else {
+            moreContent.style.display = 'none';
+            btn.textContent = 'Read More';
+        }
+    });
+    </script>
+
+    <center><a href="#" class="btn" id="downloadResumeBtn">Download Resume</a></center>
+
+    <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="#">FAQ</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About Me</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+        
+        <div class="footer-copyright">
+            <p>© Jeewaka Maduwantha | All Rights Reserved</p>
+        </div>
+    </div>
+    </footer>
+
+</body>
+</html>
